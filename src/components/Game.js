@@ -24,14 +24,14 @@ class Game extends React.Component {
 
     /**
      * Handle player action on square and update state
-     * @method handleSquareClick
+     * @method handleCellClick
      * @param {Number} id cell id
      * @param {Number} x row index
      * @param {Number} y column index
      * @returns {void}
      */
 
-    handleSquareClick = ({ id, x, y }) => {
+    handleCellClick = ({ id, x, y }) => {
         let win = null;
         const { winner, squares, stepNumber, xIsNext } = this.state;
 
@@ -147,7 +147,7 @@ class Game extends React.Component {
                 winner={winner}
                 xIsNext={xIsNext}
                 squares={squares}
-                onClick={this.handleSquareClick}
+                onClick={this.handleCellClick}
                 onReset={this.onReset}
             />
         );
